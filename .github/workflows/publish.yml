@@ -23,6 +23,8 @@ jobs:
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir dist
+        env:
+          CIBW_BEFORE_BUILD: python -m pip install -U pip && rm -rf build
 
       - uses: actions/upload-artifact@v4
         with:
