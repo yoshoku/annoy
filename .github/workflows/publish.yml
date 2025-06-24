@@ -1,9 +1,5 @@
 name: Publish
 
-# pypi trusted publishing via OIDC
-permissions:
-  id-token: write
-
 on:
   push:
     tags:
@@ -54,6 +50,9 @@ jobs:
   publish:
     needs: build
     runs-on: ubuntu-latest
+    # pypi trusted publishing via OIDC
+    permissions:
+      id-token: write
     steps:
       - name: Download all artifacts
         uses: actions/download-artifact@v4
