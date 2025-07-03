@@ -7,7 +7,7 @@ Annoy
    :alt: Annoy example
    :align: center
 
-.. figure:: https://github.com/spotify/annoy/actions/workflows/ci.yml/badge.svg
+.. image:: https://github.com/spotify/annoy/actions/workflows/ci.yml/badge.svg
    :target: https://github.com/spotify/annoy/actions
 
 Annoy (`Approximate Nearest Neighbors <http://en.wikipedia.org/wiki/Nearest_neighbor_search#Approximate_nearest_neighbor>`__ Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. It also creates large read-only file-based data structures that are `mmapped <https://en.wikipedia.org/wiki/Mmap>`__ into memory so that many processes may share the same data.
