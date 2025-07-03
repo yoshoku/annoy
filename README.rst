@@ -3,11 +3,11 @@ Annoy
 
 
 
-.. image:: https://raw.github.com/spotify/annoy/master/ann.png
+.. figure:: https://raw.github.com/spotify/annoy/master/ann.png
    :alt: Annoy example
    :align: center
 
-.. image:: https://github.com/spotify/annoy/actions/workflows/ci.yml/badge.svg
+.. figure:: https://github.com/spotify/annoy/actions/workflows/ci.yml/badge.svg
    :target: https://github.com/spotify/annoy/actions
 
 Annoy (`Approximate Nearest Neighbors <http://en.wikipedia.org/wiki/Nearest_neighbor_search#Approximate_nearest_neighbor>`__ Oh Yeah) is a C++ library with Python bindings to search for points in space that are close to a given query point. It also creates large read-only file-based data structures that are `mmapped <https://en.wikipedia.org/wiki/Mmap>`__ into memory so that many processes may share the same data.
@@ -135,6 +135,11 @@ More info
 * `Presentation from New York Machine Learning meetup <http://www.slideshare.net/erikbern/approximate-nearest-neighbor-methods-and-vector-models-nyc-ml-meetup>`__ about Annoy
 * Annoy is available as a `conda package <https://anaconda.org/conda-forge/python-annoy>`__ on Linux, OS X, and Windows.
 * `ann-benchmarks <https://github.com/erikbern/ann-benchmarks>`__ is a benchmark for several approximate nearest neighbor libraries. Annoy seems to be fairly competitive, especially at higher precisions:
+
+.. figure:: https://raw.githubusercontent.com/erikbern/ann-benchmarks/main/results/glove-100-angular.png
+   :alt: ANN benchmarks
+   :align: center
+   :target: https://github.com/erikbern/ann-benchmarks
 
 Source code
 -----------

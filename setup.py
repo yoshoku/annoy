@@ -16,10 +16,8 @@
 # the License.
 
 from setuptools import setup, Extension
-import codecs
 import os
 import platform
-import re
 import sys
 
 readme_note = """\
@@ -33,15 +31,8 @@ readme_note = """\
 
 """
 
-with codecs.open('README.rst', encoding='utf-8') as fobj:
-    content = fobj.read()
-    # Normalize line endings
-    content = content.replace('\r\n', '\n').replace('\r', '\n')
-    # Remove blank lines between directive and options
-    content = re.sub(r'(\.\. image:: [^\n]+)(\n\s*\n)+(\s+:)', r'\1\n\3', content)
-    # Remove blank lines between options themselves
-    content = re.sub(r'(\s+:[^:]+:[^\n]*)(\n\s*\n)+(\s+:)', r'\1\n\3', content)
-    long_description = readme_note + content
+with open('README.rst', encoding='utf-8') as fobj:
+    long_description = readme_note + fobj.read()
 
 # Various platform-dependent extras
 extra_compile_args = ['-D_CRT_SECURE_NO_WARNINGS', '-fpermissive']
